@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Craft OS</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/os.css">
+    <link rel="stylesheet" href="css/apps.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <!-- Desktop Background -->
+    <div id="desktop" class="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" data-app="browser">
+                <div class="icon-image">🌐</div>
+                <p>Navegador</p>
+            </div>
+            <div class="desktop-icon" data-app="app-store">
+                <div class="icon-image">🛒</div>
+                <p>App Store</p>
+            </div>
+            <div class="desktop-icon" data-app="phone">
+                <div class="icon-image">☎️</div>
+                <p>Telefone</p>
+            </div>
+            <div class="desktop-icon" data-app="camera">
+                <div class="icon-image">📷</div>
+                <p>Câmera</p>
+            </div>
+            <div class="desktop-icon" data-app="messages">
+                <div class="icon-image">💬</div>
+                <p>Mensagens</p>
+            </div>
+            <div class="desktop-icon" data-app="games">
+                <div class="icon-image">🎮</div>
+                <p>Party Craft</p>
+            </div>
+            <div class="desktop-icon" data-app="files">
+                <div class="icon-image">📁</div>
+                <p>Arquivos</p>
+            </div>
+            <div class="desktop-icon" data-app="settings">
+                <div class="icon-image">⚙️</div>
+                <p>Configurações</p>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="taskbar-left">
+                <button class="menu-button" id="start-menu-btn">
+                    <span>🎮 Party Craft</span>
+                </button>
+            </div>
+            <div class="taskbar-center" id="taskbar-apps"></div>
+            <div class="taskbar-right">
+                <div class="system-tray">
+                    <div class="clock" id="system-clock">00:00</div>
+                    <div class="battery">🔋 100%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Window Manager Container -->
+    <div id="windows-container" class="windows-container"></div>
+
+    <!-- Start Menu -->
+    <div id="start-menu" class="start-menu hidden">
+        <div class="start-menu-content">
+            <h2>Aplicativos</h2>
+            <div class="apps-list" id="start-apps-list"></div>
+        </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="context-menu" class="context-menu hidden">
+        <div class="context-item" data-action="new-folder">📁 Nova Pasta</div>
+        <div class="context-item" data-action="new-file">📄 Novo Arquivo</div>
+        <hr>
+        <div class="context-item" data-action="refresh">🔄 Atualizar</div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🎮</div>
+            <h1>Party Craft OS</h1>
+            <p>Carregando...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Core System -->
+    <script src="js/core/file-system.js"></script>
+    <script src="js/core/window-manager.js"></script>
+    <script src="js/core/app-loader.js"></script>
+    <script src="js/core/os.js"></script>
+
+    <!-- Data -->
+    <script src="js/data/apps-catalog.js"></script>
+    <script src="js/data/websites.js"></script>
+    <script src="js/data/user-profile.js"></script>
+
+    <!-- Apps -->
+    <script src="js/apps/browser.js"></script>
+    <script src="js/apps/app-store.js"></script>
+    <script src="js/apps/phone.js"></script>
+    <script src="js/apps/camera.js"></script>
+    <script src="js/apps/messages.js"></script>
+    <script src="js/apps/files.js"></script>
+    <script src="js/apps/settings.js"></script>
+
+    <!-- Games -->
+    <script src="js/games/party-games.js"></script>
+    <script src="js/games/mini-games/dance.js"></script>
+    <script src="js/games/mini-games/trivia.js"></script>
+    <script src="js/games/mini-games/drawing.js"></script>
+    <script src="js/games/mini-games/music.js"></script>
+
+    <!-- Main -->
+    <script src="js/main.js"></script>
+</body>
+</html>
